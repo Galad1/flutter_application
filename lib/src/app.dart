@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'screens/calendar_screen.dart';
 import 'screens/choose_workout_screen.dart';
 import 'screens/components/appbars.dart';
 import 'screens/components/bottom_bar.dart';
-import 'screens/create_workout_screen.dart';
 
 class FitnessApp extends StatefulWidget {
   const FitnessApp({Key? key}) : super(key: key);
@@ -27,7 +25,7 @@ class _FitnessAppState extends State<FitnessApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(62, 62, 62, 1.0),
+      backgroundColor: const Color.fromRGBO(62, 62, 62, 1.0),
       appBar: buildStandardAppbar(),
       body: _widgetOptions.elementAt(_selectedIndex),
       bottomNavigationBar:
@@ -40,5 +38,33 @@ class _FitnessAppState extends State<FitnessApp> {
     setState(() {
       _selectedIndex = index;
     });
+  }
+}
+
+class CalendarScreen extends StatefulWidget {
+  const CalendarScreen({Key? key}) : super(key: key);
+
+  @override
+  State<CalendarScreen> createState() => _CalendarScreenState();
+}
+
+class _CalendarScreenState extends State<CalendarScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
+class CreateWorkoutScreen extends StatefulWidget {
+  const CreateWorkoutScreen({Key? key}) : super(key: key);
+
+  @override
+  _CreateWorkoutScreenState createState() => _CreateWorkoutScreenState();
+}
+
+class _CreateWorkoutScreenState extends State<CreateWorkoutScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
